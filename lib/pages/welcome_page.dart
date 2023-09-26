@@ -35,14 +35,14 @@ class WelcomePage extends StatelessWidget {
                 ),
                 const SizedBox(height: 13.0),
                 const Text(
-                  'Welcome to GemStore!',
+                  ' The home for a fashionista',
                   style: AppStyle.w_16_700,
                 ),
                 const SizedBox(height: 60.0),
                 OutlineCustomButton(
                   onTap: () {
                     Navigator.of(context).push(MaterialPageRoute(
-                      builder: (context) => const IntroPage(),
+                      builder: (context) => IntroPage(),
                     ));
                   },
                   label: 'Get Started',

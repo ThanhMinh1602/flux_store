@@ -4,8 +4,8 @@ import 'package:flux_store/gen/assets.gen.dart';
 import 'package:flux_store/pages/home_page.dart';
 import 'package:flux_store/resource/app_colors.dart';
 import 'package:flux_store/resource/app_styles.dart';
-import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+// ignore: must_be_immutable
 class MainPage extends StatefulWidget {
   MainPage({super.key});
   List<String> listIcon = [

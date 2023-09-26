@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flux_store/components/button/outline_button_custom.dart';
 import 'package:flux_store/models/intro_model.dart';
@@ -8,25 +6,16 @@ import 'package:flux_store/resource/app_colors.dart';
 import 'package:flux_store/resource/app_styles.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+// ignore: must_be_immutable
 class IntroPage extends StatefulWidget {
-  const IntroPage({super.key});
-
+  IntroPage({super.key});
+  int currentPage = 0;
   @override
   State<IntroPage> createState() => _IntroPageState();
 }
 
 class _IntroPageState extends State<IntroPage> {
   final PageController pageController = PageController();
-  final StreamController<int> pageStreamController =
-      StreamController.broadcast();
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    pageController.addListener(() {
-      pageStreamController.add(pageController.page!.toInt());
-    });
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -39,27 +28,21 @@ class _IntroPageState extends State<IntroPage> {
             top: 90.0,
             left: 52.0,
             right: 52.0,
-            child: StreamBuilder<Object>(
-                initialData: 0,
-                stream: pageStreamController.stream,
-                builder: (context, snapshot) {
-                  int index = int.parse(snapshot.data.toString());
-                  return Column(
-                    children: [
-                      Text(
-                        listIntrol[index].title ?? '',
-                        style: AppStyle.bl_20_700,
-                      ),
-                      const SizedBox(
-                        height: 17.0,
-                      ),
-                      Text(
-                        listIntrol[index].subTitle ?? '',
-                        style: AppStyle.bl_14_400,
-                      ),
-                    ],
-                  );
-                }),
+            child: Column(
+              children: [
+                Text(
+                  listIntrol[widget.currentPage].title ?? '',
+                  style: AppStyle.bl_20_700,
+                ),
+                const SizedBox(
+                  height: 17.0,
+                ),
+                Text(
+                  listIntrol[widget.currentPage].subTitle ?? '',
+                  style: AppStyle.bl_14_400,
+                ),
+              ],
+            ),
           ),
           Positioned(
             top: MediaQuery.of(context).size.height * (461 / 812),
@@ -104,6 +87,11 @@ class _IntroPageState extends State<IntroPage> {
             right: 0.0,
             bottom: 253.0,
             child: PageView.custom(
+              onPageChanged: (int page) {
+                setState(() {
+                  widget.currentPage = page;
+                });
+              },
               childrenDelegate: SliverChildBuilderDelegate(
                 childCount: listIntrol.length,
                 (context, index) {
