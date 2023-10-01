@@ -56,4 +56,9 @@ class AppStyle {
       fontSize: 13,
       fontWeight: FontWeight.w400,
       color: AppColor.h_9B9B9B);
+  static const TextStyle gr_12_300 = TextStyle(
+      fontFamily: FontFamily.sans,
+      fontSize: 12,
+      fontWeight: FontWeight.w300,
+      color: AppColor.h_777E90);
 }
