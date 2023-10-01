@@ -22,15 +22,15 @@ class HomePage extends StatefulWidget {
     Icons.account_balance_wallet_rounded,
     Icons.brush_rounded
   ];
-  int current = 0;
-  int currentPage = 0;
+  int currentCate = 0;
+  int currentPageBanner = 0;
 
   @override
   State<HomePage> createState() => _HomePageState();
 }
 
 class _HomePageState extends State<HomePage> {
-  final PageController pageController = PageController();
+
   List<ProductModel> products = [];
   List<ProductModel> recommends = [];
   @override
@@ -112,7 +112,8 @@ class _HomePageState extends State<HomePage> {
             onTap: () {
               Navigator.of(context).push(
                 MaterialPageRoute(
-                  builder: (context) =>  DetailPage(productModel: products[index]),
+                  builder: (context) =>
+                      DetailPage(productModel: products[index]),
                 ),
               );
             },
@@ -159,7 +160,7 @@ class _HomePageState extends State<HomePage> {
               child: GestureDetector(
                 onTap: () {
                   setState(() {
-                    widget.current = index;
+                    widget.currentCate = index;
                     products = listProduct
                         .where((element) =>
                             element.categoryModel?.id == listCategory[index].id)
@@ -177,17 +178,17 @@ class _HomePageState extends State<HomePage> {
                         shape: BoxShape.circle,
                         border: Border.all(
                             width: 2,
-                            color: widget.current == index
+                            color: widget.currentCate == index
                                 ? AppColor.h_3A2C27
                                 : Colors.transparent),
                       ),
                       child: CircleAvatar(
-                        backgroundColor: widget.current == index
+                        backgroundColor: widget.currentCate == index
                             ? AppColor.h_3A2C27
                             : AppColor.h_F3F3F3,
                         child: Icon(
                           widget.listIcon[index],
-                          color: widget.current == index
+                          color: widget.currentCate == index
                               ? AppColor.h_FFFFFF
                               : AppColor.h_9D9D9D,
                         ),
@@ -208,11 +209,11 @@ class _HomePageState extends State<HomePage> {
     return SizedBox(
       height: 168.0,
       child: PageView.builder(
-        controller: pageController,
+    
         itemCount: listBannerModels.length,
         onPageChanged: (int page) {
           setState(() {
-            widget.currentPage = page;
+            widget.currentPageBanner = page;
           });
         },
         itemBuilder: (context, index) {
@@ -240,7 +241,11 @@ class _HomePageState extends State<HomePage> {
                 ),
                 Positioned(
                   bottom: 8.5,
-                  child: ActivePage(widget: widget),
+                  child: ActivePage(
+                    length: listBannerModels.length,
+                    currentPage: widget.currentPageBanner,
+
+                  ),
                 )
               ],
             ),
@@ -297,4 +302,3 @@ class _HomePageState extends State<HomePage> {
     );
   }
 }
-

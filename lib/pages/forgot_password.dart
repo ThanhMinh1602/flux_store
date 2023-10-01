@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:flux_store/components/button/back_circle_button_custom.dart';
+import 'package:flux_store/components/button/circle_button_custom.dart';
 
 import 'package:flux_store/pages/verification_code_page.dart';
 import 'package:flux_store/pages/widgets/login_textformfield_custom.dart';
@@ -18,7 +18,7 @@ class ForgetPassword extends StatelessWidget {
           top: MediaQuery.of(context).padding.top + 18.0,
         ),
         children: [
-          BackCircleButtonCustom(
+          CircleButtonCustom.back(
             onPressed: () {},
           ),
           const SizedBox(height: 34.0),

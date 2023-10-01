@@ -1,15 +1,17 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:flutter/material.dart';
-import 'package:flux_store/models/banner_model.dart';
-import 'package:flux_store/pages/home_page.dart';
 import 'package:flux_store/resource/app_colors.dart';
 
 class ActivePage extends StatelessWidget {
+  final int? currentPage;
+  final int? length;
+  final Color? color;
   const ActivePage({
-    super.key,
-    this.widget,
-  });
-
-  final HomePage? widget;
+    Key? key,
+    this.currentPage,
+    this.length,
+    this.color = AppColor.h_FFFFFF,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +21,7 @@ class ActivePage extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           ...List.generate(
-            listBannerModels.length,
+            length!,
             (index) => Container(
               padding: const EdgeInsets.all(1.5),
               width: 10.5,
@@ -27,13 +29,11 @@ class ActivePage extends StatelessWidget {
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 border: Border.all(
-                    color: widget?.currentPage == index
-                        ? AppColor.h_FFFFFF
-                        : Colors.transparent),
+                    color: currentPage == index ? color! : Colors.transparent),
               ),
-              child: const CircleAvatar(
+              child:  CircleAvatar(
                 radius: 5.5,
-                backgroundColor: AppColor.h_FFFFFF,
+                backgroundColor: color,
               ),
             ),
           ),

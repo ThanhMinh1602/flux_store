@@ -7,7 +7,7 @@ class ProductModel {
   String? image;
   String? price;
   CategoryModel? categoryModel;
-  int? raitingStart;
+  String? raitingStar;
   int? view;
   List<String>? imageDetail;
   List<Color>? colors;
@@ -30,8 +30,9 @@ List<ProductModel> listProduct = [
       'https://pubcdn.ivymoda.com/files/product/thumab/1400/2023/09/16/e84d3542a8dc6806cabd812ea9eecdd7.JPG',
       'https://pubcdn.ivymoda.com/files/product/thumab/1400/2022/11/04/5a28b8711de63a5d90dab3db67b24774.jpg'
     ]
-    ..colors = [Colors.black, Colors.red, Colors.green]
+    ..colors = [Colors.green, Colors.amber, Colors.black]
     ..sizes = ['s', 'm', 'l']
+    ..raitingStar = '83'
     ..description =
         'Đây là thiết kế đầm mà mọi cô nàng đều nên có bởi thiết kế ôm'
             'sát, tôn lên đường cong cơ thể. Đầm phối cùng đai da (có thể'
@@ -56,8 +57,9 @@ List<ProductModel> listProduct = [
       'https://pubcdn.ivymoda.com/files/product/thumab/1400/2023/09/16/e84d3542a8dc6806cabd812ea9eecdd7.JPG',
       'https://pubcdn.ivymoda.com/files/product/thumab/1400/2022/11/04/5a28b8711de63a5d90dab3db67b24774.jpg'
     ]
-    ..colors = [Colors.black, Colors.red, Colors.green]
+    ..colors = [Colors.green, Colors.amber, Colors.black]
     ..sizes = ['s', 'm', 'l']
+    ..raitingStar ='83'
     ..description =
         'Đây là thiết kế đầm mà mọi cô nàng đều nên có bởi thiết kế ôm'
             'sát, tôn lên đường cong cơ thể. Đầm phối cùng đai da (có thể'
@@ -82,8 +84,9 @@ List<ProductModel> listProduct = [
       'https://pubcdn.ivymoda.com/files/product/thumab/1400/2023/09/16/e84d3542a8dc6806cabd812ea9eecdd7.JPG',
       'https://pubcdn.ivymoda.com/files/product/thumab/1400/2022/11/04/5a28b8711de63a5d90dab3db67b24774.jpg'
     ]
-    ..colors = [Colors.black, Colors.red, Colors.green]
+    ..colors = [Colors.green, Colors.amber, Colors.black]
     ..sizes = ['s', 'm', 'l']
+    ..raitingStar ='83'
     ..description =
         'Đây là thiết kế đầm mà mọi cô nàng đều nên có bởi thiết kế ôm'
             'sát, tôn lên đường cong cơ thể. Đầm phối cùng đai da (có thể'
@@ -108,8 +111,9 @@ List<ProductModel> listProduct = [
       'https://pubcdn.ivymoda.com/files/product/thumab/1400/2023/09/16/e84d3542a8dc6806cabd812ea9eecdd7.JPG',
       'https://pubcdn.ivymoda.com/files/product/thumab/1400/2022/11/04/5a28b8711de63a5d90dab3db67b24774.jpg'
     ]
-    ..colors = [Colors.black, Colors.red, Colors.green]
+    ..colors = [Colors.green, Colors.amber, Colors.black]
     ..sizes = ['s', 'm', 'l']
+    ..raitingStar = '83'
     ..description =
         'Đây là thiết kế đầm mà mọi cô nàng đều nên có bởi thiết kế ôm'
             'sát, tôn lên đường cong cơ thể. Đầm phối cùng đai da (có thể'
@@ -134,8 +138,9 @@ List<ProductModel> listProduct = [
       'https://pubcdn.ivymoda.com/files/product/thumab/1400/2023/09/16/e84d3542a8dc6806cabd812ea9eecdd7.JPG',
       'https://pubcdn.ivymoda.com/files/product/thumab/1400/2022/11/04/5a28b8711de63a5d90dab3db67b24774.jpg'
     ]
-    ..colors = [Colors.black, Colors.red, Colors.green]
+    ..colors = [Colors.green, Colors.amber, Colors.black]
     ..sizes = ['s', 'm', 'l']
+    ..raitingStar = '83'
     ..description =
         'Đây là thiết kế đầm mà mọi cô nàng đều nên có bởi thiết kế ôm'
             'sát, tôn lên đường cong cơ thể. Đầm phối cùng đai da (có thể'
@@ -160,8 +165,9 @@ List<ProductModel> listProduct = [
       'https://pubcdn.ivymoda.com/files/product/thumab/1400/2023/09/16/e84d3542a8dc6806cabd812ea9eecdd7.JPG',
       'https://pubcdn.ivymoda.com/files/product/thumab/1400/2022/11/04/5a28b8711de63a5d90dab3db67b24774.jpg'
     ]
-    ..colors = [Colors.black, Colors.red, Colors.green]
+    ..colors = [Colors.green, Colors.amber, Colors.black]
     ..sizes = ['s', 'm', 'l']
+    ..raitingStar = '83'
     ..description =
         'Đây là thiết kế đầm mà mọi cô nàng đều nên có bởi thiết kế ôm'
             'sát, tôn lên đường cong cơ thể. Đầm phối cùng đai da (có thể'
@@ -186,8 +192,9 @@ List<ProductModel> listProduct = [
       'https://pubcdn.ivymoda.com/files/product/thumab/1400/2023/09/16/e84d3542a8dc6806cabd812ea9eecdd7.JPG',
       'https://pubcdn.ivymoda.com/files/product/thumab/1400/2022/11/04/5a28b8711de63a5d90dab3db67b24774.jpg'
     ]
-    ..colors = [Colors.black, Colors.red, Colors.green]
+    ..colors = [Colors.green, Colors.amber, Colors.black]
     ..sizes = ['s', 'm', 'l']
+    ..raitingStar = '83'
     ..description =
         'Đây là thiết kế đầm mà mọi cô nàng đều nên có bởi thiết kế ôm'
             'sát, tôn lên đường cong cơ thể. Đầm phối cùng đai da (có thể'
@@ -212,8 +219,9 @@ List<ProductModel> listProduct = [
       'https://pubcdn.ivymoda.com/files/product/thumab/1400/2023/09/16/e84d3542a8dc6806cabd812ea9eecdd7.JPG',
       'https://pubcdn.ivymoda.com/files/product/thumab/1400/2022/11/04/5a28b8711de63a5d90dab3db67b24774.jpg'
     ]
-    ..colors = [Colors.black, Colors.red, Colors.green]
+    ..colors = [Colors.green, Colors.amber, Colors.black]
     ..sizes = ['s', 'm', 'l']
+    ..raitingStar = '83'
     ..description =
         'Đây là thiết kế đầm mà mọi cô nàng đều nên có bởi thiết kế ôm'
             'sát, tôn lên đường cong cơ thể. Đầm phối cùng đai da (có thể'
@@ -238,8 +246,9 @@ List<ProductModel> listProduct = [
       'https://pubcdn.ivymoda.com/files/product/thumab/1400/2023/09/16/e84d3542a8dc6806cabd812ea9eecdd7.JPG',
       'https://pubcdn.ivymoda.com/files/product/thumab/1400/2022/11/04/5a28b8711de63a5d90dab3db67b24774.jpg'
     ]
-    ..colors = [Colors.black, Colors.red, Colors.green]
+    ..colors = [Colors.green, Colors.amber, Colors.black]
     ..sizes = ['s', 'm', 'l']
+    ..raitingStar ='83'
     ..description =
         'Đây là thiết kế đầm mà mọi cô nàng đều nên có bởi thiết kế ôm'
             'sát, tôn lên đường cong cơ thể. Đầm phối cùng đai da (có thể'

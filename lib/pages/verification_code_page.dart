@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flux_store/components/button/back_circle_button_custom.dart';
+import 'package:flux_store/components/button/circle_button_custom.dart';
 import 'package:flux_store/pages/create_new_password.dart';
 import 'package:flux_store/resource/app_colors.dart';
 import 'package:flux_store/resource/app_styles.dart';
@@ -15,7 +15,7 @@ class VerificationCode extends StatelessWidget {
           top: MediaQuery.of(context).padding.top + 18.0,
         ),
         children: [
-          BackCircleButtonCustom(
+          CircleButtonCustom.back(
             onPressed: () {},
           ),
           const SizedBox(height: 34.0),
