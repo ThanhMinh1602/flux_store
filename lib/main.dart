@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flux_store/models/product_model.dart';
+import 'package:flux_store/pages/detail_page.dart';
 
 import 'package:flux_store/pages/welcome_page.dart';
 
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(useMaterial3: true),
-      home: const WelcomePage(),
+      home:  DetailPage(productModel: listProduct[0],),
     );
   }
 }

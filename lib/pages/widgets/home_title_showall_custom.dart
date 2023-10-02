@@ -18,7 +18,7 @@ class TitleShowAllCustom extends StatelessWidget {
             title,
             style: AppStyle.bl_20_700,
           ),
-          Text(
+          const Text(
             'Show all',
             style: AppStyle.gr_13_400,
           ),

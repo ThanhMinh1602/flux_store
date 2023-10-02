@@ -14,6 +14,11 @@ class AppStyle {
       fontSize: 16,
       fontWeight: FontWeight.w700,
       color: AppColor.h_FFFFFF);
+  static const TextStyle w_12_500 = TextStyle(
+      fontFamily: FontFamily.sans,
+      fontSize: 12,
+      fontWeight: FontWeight.w500,
+      color: AppColor.h_FFFFFF);
   static const TextStyle w_22_700 = TextStyle(
       fontFamily: FontFamily.sans,
       fontSize: 22,
@@ -71,9 +76,14 @@ class AppStyle {
       fontSize: 12,
       fontWeight: FontWeight.w300,
       color: AppColor.h_777E90);
-        static const TextStyle gr_14_400 = TextStyle(
+  static const TextStyle gr_14_400 = TextStyle(
       fontFamily: FontFamily.sans,
       fontSize: 14,
       fontWeight: FontWeight.w400,
+      color: AppColor.h_777E90);
+  static const TextStyle gr_12_500 = TextStyle(
+      fontFamily: FontFamily.sans,
+      fontSize: 12,
+      fontWeight: FontWeight.w500,
       color: AppColor.h_777E90);
 }
